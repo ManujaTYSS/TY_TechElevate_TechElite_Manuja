@@ -1,0 +1,89 @@
+<div class="container card card-body col-md-4 offset-4 mt-5">
+    <form action="" #addRequirment='ngForm' (ngSubmit)='addRequirments(addRequirment)'>
+        <br>
+        <!-- <label for="FORM" style="text-align: center; " style="color: blue;">Add Requirment</label> -->
+        <h1 style="color: darkslateblue;" style="text-align: center">Add Requirment</h1>
+        <div class="form-group">
+            <input type="text" name="client" #client='ngModel' ngModel id="" class="form-control" required placeholder="enter client name...">
+        </div>
+        <div *ngIf="client.touched && client.invalid">
+            <div class="alert alert-danger" *ngIf="client.errors.required"><small style="text-align: right">
+                    This  field is required</small></div>
+        </div>
+        <div class="form-group">
+            <input type="text" name="technology" #technology='ngModel' ngModel id="" class="form-control" required placeholder="enter technical skill...">
+        </div>
+        <div *ngIf="technology.touched && technology.invalid">
+                <div class="alert alert-danger" *ngIf="technology.errors.required"><small style="text-align: right">
+                        This  field is required</small></div>
+        </div>
+        <div class="form-group">
+            <input type="number" name="yoe" #yoe='ngModel' ngModel id="" class="form-control" required placeholder="enter year of experience required...">
+        </div>
+        <div *ngIf="yoe.touched && yoe.invalid">
+            <div class="alert alert-danger" *ngIf="yoe.errors.required" ><small style="text-align: right">
+                        This  field is required</small></div>
+        </div>
+        <div class="form-group">
+            <input type="text" name="location" #location='ngModel' ngModel id="" class="form-control" required placeholder="enter location...">
+        </div>
+        <div *ngIf="location.touched && location.invalid">
+            <div class="alert alert-danger" *ngIf="location.errors.required" ><small style="text-align: right">
+                        This  field is required</small></div>
+        </div>
+        <div class="form-group">
+            <input type="number" name="nop" #nop='ngModel' ngModel id="" class="form-control" required placeholder="enter number of position..">
+        </div>
+        <div *ngIf="nop.touched && nop.invalid">
+            <div class="alert alert-danger" *ngIf="nop.errors.required" ><small style="text-align: right">
+                        This  field is required</small></div>
+        </div>
+        
+        <div class="form-group">
+            <input type="date" name="odate" #odate='ngModel' ngModel id="" class="form-control" required placeholder="enter opening date...">
+        </div>
+        <div *ngIf="odate.touched && odate.invalid">
+            <div class="alert alert-danger" *ngIf="odateerrors.required" ><small style="text-align: right">
+                        This  field is required</small></div>
+        </div>
+        <div class="form-group">
+            <input type="date" name="cdate" #cdate='ngModel' ngModel id="" class="form-control" required placeholder="enter closing date...">
+        </div>
+        <div *ngIf="cdate.touched && cdate.invalid">
+            <div class="alert alert-danger" *ngIf="cdate.errors.required" ><small style="text-align: right">
+                        This  field is required</small></div>
+        </div>
+        <div class="form-group">
+            <input type="text" name="role" #role='ngModel' ngModel id="" class="form-control" required placeholder="enter role...">
+        </div>
+        <div *ngIf="role.touched && role.invalid">
+            <div class="alert alert-danger" *ngIf="role.errors.required" ><small style="text-align: right">
+                        This  field is required</small></div>
+        </div>
+        <div class="form-group">
+            <input type="number" name="rate" #rate='ngModel' ngModel id="" class="form-control" required placeholder="enter rate card...">
+        </div>
+        <div *ngIf="rate.touched && rate.invalid">
+            <div class="alert alert-danger" *ngIf="rate.errors.required" ><small style="text-align: right">
+                        This  field is required</small></div>
+        </div>
+        <div class="form-group">
+            <input type="text" name="contact" #contact='ngModel' ngModel id="" class="form-control" required placeholder="enter contact person...">
+        </div>
+        <div *ngIf="contact.touched && contact.invalid">
+            <div class="alert alert-danger" *ngIf="contact.errors.required" ><small style="text-align: right">
+                        This  field is required</small></div>
+        </div>
+        <div class="form-group">
+            <textarea name="message" #message ='ngModel' ngModel rows="10" cols="30" class="form-control" required placeholder="enter job description..."></textarea>
+        </div>
+        <div *ngIf="message.touched && message.invalid">
+            <div class="alert alert-danger" *ngIf="message.errors.required" ><small style="text-align: right">
+                        This  field is required</small></div>
+        </div>
+        
+        <div>
+            <button type="submit" class="btn btn-outline-warning float-right"  >Add</button>
+        </div>
+    </form>
+</div>
